@@ -69,9 +69,11 @@ class BurgerBuilder extends Component {
   };
 
   render() {
+    //  Copies the current state in an immutable way
     const disabledInfo = {
       ...this.state.ingredients
     }
+    //  Check the value of the key if 0 set true
     for (let key in disabledInfo){
       disabledInfo[key] = disabledInfo[key] <= 0
     }
