@@ -25,6 +25,10 @@ class BurgerBuilder extends Component {
   removeIngredientHandler = type => {
         //  Get the value of the ingredient
         const oldCount = this.state.ingredients[type];
+        //  Check if the count is 0 or less to fix array error
+        if(oldCount <= 0){
+          return;
+        }
         //  Update the ingredient current value
         const updatedCounted = oldCount - 1;
         //  Create a new state object from the current state
