@@ -6,7 +6,7 @@ import classes from "./CheckoutSummary.module.css";
 const CheckoutSummary = (props) => (
   <div className={classes.CheckoutSummary}>
     <h1>We hope it tastes well!</h1>
-    <div style={{ width: "100%", margin: "auto" }}>
+    <div style={{ width: "100%", margin: "auto", height:'300px' }}>
       <Burger ingredients={props.ingredients} />
     </div>
     <Button clicked btnType="Danger">
